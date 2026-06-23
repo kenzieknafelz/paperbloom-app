@@ -1,0 +1,35 @@
+#rvw-form {
+  background-color: #797f3e;
+  padding: 10px;
+  margin: 10px;
+  width: 50%;
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+}
+
+.rvw-input {
+  font-family: "Times New Roman", Times, serif;
+  margin: 5px;
+  padding: 5px;
+  border: none;
+  border-radius: 8px;
+  color: #454f2d;
+  font-weight: bold;
+}
+
+#rvw-btn {
+  font-family: "Times New Roman", Times, serif;
+  margin: 5px;
+  padding: 5px;
+  border: none;
+  border-radius: 8px;
+  background-color: #454f2d;
+  color: #f5f1e4;
+  font-weight: bold;
+}
+
+#rvw-btn:hover {
+  color: #efb711;
+}

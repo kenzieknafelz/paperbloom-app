@@ -18,15 +18,20 @@ export default function ProgressBar() {
           style={{ width: `${percentage}%` }}
         />
       </div>
+      <label htmlFor="pages-read">Pages Read:</label>
       <input
         className="progress-input"
+        id="pages-read"
         type="number"
         placeholder="Pages read"
         value={pagesRead}
         onChange={(e) => setPagesRead(Number(e.target.value))}
       />
+      <br />
+      <label htmlFor="total-pages">Total Pages:</label>
       <input
         className="progress-input"
+        id="total-pages"
         type="number"
         placeholder="Total pages"
         value={totalPages}

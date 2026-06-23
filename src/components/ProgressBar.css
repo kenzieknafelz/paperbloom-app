@@ -1,11 +1,10 @@
 .tracker {
-  background-color: #dac997;
+  background-color: #eadfbd;
   padding: 10px;
   margin: 10px;
   width: 50%;
   border-radius: 5px;
-  color: #855228;
-  justify-content: center;
+  color: #797f3e;
 }
 
 #reading-progress {
@@ -14,20 +13,21 @@
 
 .progress-container {
   width: 100%;
-  margin: 10px;
+  margin-right: 10px;
+  margin-bottom: 5px;
   padding-bottom: 10px;
   height: 16px;
-  background-color: #ffffffd2; /* the grey "track" */
+  background-color: #ffffffd2;
   border-radius: 8px;
-  overflow: hidden; /* keeps fill from spilling out */
+  overflow: hidden;
 }
 
 .progress-fill {
   height: 100%;
-  background-color: #4caf50; /* your fill color */
+  background-color: #454f2d;
   padding-bottom: 10px;
   border-radius: 8px;
-  transition: width 0.3s ease; /* smooth animation when value changes */
+  transition: width 0.3s ease;
 }
 
 .progress-input {
@@ -35,10 +35,12 @@
   padding: 5px;
   border: none;
   border-radius: 8px;
-  color: #855228;
+  color: #454f2d;
   font-weight: bold;
 }
 
 ::placeholder {
-  color: #8552288e;
+  color: #454f2d8e;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
 }
