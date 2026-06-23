@@ -1,7 +1,23 @@
+.tracker {
+  background-color: #dac997;
+  padding: 10px;
+  margin: 10px;
+  width: 50%;
+  border-radius: 5px;
+  color: #855228;
+  justify-content: center;
+}
+
+#reading-progress {
+  text-align: center;
+}
+
 .progress-container {
   width: 100%;
+  margin: 10px;
+  padding-bottom: 10px;
   height: 16px;
-  background-color: #e0e0e0; /* the grey "track" */
+  background-color: #ffffffd2; /* the grey "track" */
   border-radius: 8px;
   overflow: hidden; /* keeps fill from spilling out */
 }
@@ -9,6 +25,20 @@
 .progress-fill {
   height: 100%;
   background-color: #4caf50; /* your fill color */
+  padding-bottom: 10px;
   border-radius: 8px;
   transition: width 0.3s ease; /* smooth animation when value changes */
+}
+
+.progress-input {
+  margin: 5px;
+  padding: 5px;
+  border: none;
+  border-radius: 8px;
+  color: #855228;
+  font-weight: bold;
+}
+
+::placeholder {
+  color: #8552288e;
 }
