@@ -1,0 +1,14 @@
+.progress-container {
+  width: 100%;
+  height: 16px;
+  background-color: #e0e0e0; /* the grey "track" */
+  border-radius: 8px;
+  overflow: hidden; /* keeps fill from spilling out */
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #4caf50; /* your fill color */
+  border-radius: 8px;
+  transition: width 0.3s ease; /* smooth animation when value changes */
+}

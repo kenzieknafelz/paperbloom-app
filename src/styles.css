@@ -1,0 +1,21 @@
+body {
+  background-color: #889a37;
+  color: white;
+}
+
+.logo {
+  width: 150px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color: #573315;
+}
+
+#tagline {
+  font-style: italic;
+  text-align: center;
+}
