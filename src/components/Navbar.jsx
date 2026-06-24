@@ -11,7 +11,7 @@ export default function Navbar() {
                 </li>
 
                 <li className="navItem">
-                    <a href="../pages/Wishlist.jsx">Book Wishlist</a>
+                    <Link to='/wishlist'>Wishlist</Link>
                 </li>
 
                 <li className="navItem">

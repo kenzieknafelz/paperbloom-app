@@ -1,4 +1,3 @@
-import React, { use } from 'react';
 import { useState } from 'react';
 import { Routes, Route} from 'react-router-dom';
 
@@ -6,6 +5,7 @@ import openBook from './assets/open-book.png';
 import Navbar from './components/Navbar';
 import Dashboard from './pages/Dashboard';
 import ReviewsPage from './pages/ReviewsPage';
+import WishlistPage from './pages/WishlistPage';
 
 
 
@@ -19,8 +19,23 @@ export default function App() {
     ]);
 
     function addReview(newReview) {
-        setReviews([...reviews, {id: reviews.length + 1, ...newReview}]);
+        setReviews([{id: reviews.length + 1, ...newReview}, ...reviews]);
     }
+
+    const [wishlist, setWishlist] = useState([]);
+    const [currentRead, setCurrentRead] = useState(null);
+
+    function addToWishlist(book) {
+        setWishlist([{id: wishlist.length + 1, ...book}, ...wishlist]);
+    }
+
+    function selectCurrentRead(book) {
+        setCurrentRead(book);
+    }
+
+
+
+
     return (
         <>
             <header>
@@ -31,8 +46,28 @@ export default function App() {
             <p id="tagline">Cultivate the garden of your mind.</p>
             <Navbar />
             <Routes>
-                <Route path="/" element={<Dashboard reviews={reviews} addReview={addReview} />} />
-                <Route path="/reviews" element={<ReviewsPage reviews={reviews} />} />
+                <Route path="/" element={
+                    <Dashboard 
+                    reviews={reviews} 
+                    addReview={addReview}
+                    wishlist={wishlist}
+                    addToWishlist={addToWishlist}
+                    currentRead={currentRead}
+                    selectCurrentRead={selectCurrentRead}
+                    />}
+                />
+                <Route path="/reviews" element={
+                    <ReviewsPage
+                    reviews={reviews} 
+                    />} 
+                />
+                <Route path="/wishlist" element={
+                    <WishlistPage
+                    wishlist={wishlist}
+                    addToWishlist={addToWishlist}
+                    selectCurrentRead={selectCurrentRead}
+                    />}
+                />
             </Routes>
         </>
     );

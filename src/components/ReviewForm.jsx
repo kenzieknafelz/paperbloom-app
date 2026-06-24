@@ -20,8 +20,9 @@ export default function ReviewForm({addReview}) {
         setFormData({ title: '', author: '', review: '', rating: ''});
     }
     return (
-        <>
-            <form id="rvw-form" onSubmit={handleSubmit}>
+        <div id="rvw-form">
+            <h2>New Review</h2>
+            <form onSubmit={handleSubmit}>
                 <label htmlFor="title">Title:</label>
                 <input
                     name="title"
@@ -69,8 +70,8 @@ export default function ReviewForm({addReview}) {
                 />
                 <br />
 
-                <input id="rvw-btn" type="submit"></input>
+                <button id="rvw-btn" type="submit">+ Add Review</button>
             </form>
-        </>
+        </div>
     )
 }

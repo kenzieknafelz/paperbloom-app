@@ -1,14 +1,12 @@
-#rvw-form {
-  background-color: #797f3e;
+.wishlist-container {
+  background-color: #eadfbd;
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
-  color: #ffffff;
-  font-weight: bold;
-  text-align: center;
+  color: #797f3e;
 }
 
-.rvw-input {
+.wishlist-input {
   font-family: "Times New Roman", Times, serif;
   margin: 5px;
   padding: 5px;
@@ -18,7 +16,8 @@
   font-weight: bold;
 }
 
-#rvw-btn {
+#wishlist-btn,
+#current-btn {
   font-family: "Times New Roman", Times, serif;
   margin: 5px;
   padding: 5px;
@@ -29,6 +28,24 @@
   font-weight: bold;
 }
 
-#rvw-btn:hover {
+#wishlist-btn:hover,
+#current-btn:hover {
   color: #efb711;
+}
+
+.wishlist-list {
+  background-color: #a2865a;
+  padding: 10px;
+  border-radius: 8px;
+  list-style-type: none;
+}
+.wishlist-item {
+  background-color: #eadfbd;
+  color: #454f2d;
+  margin: 5px;
+  padding: 5px;
+}
+
+.book-title {
+  font-style: italic;
 }

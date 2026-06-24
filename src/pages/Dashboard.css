@@ -1,3 +1,7 @@
 .dashboard-layout {
   display: flex;
 }
+
+.dashboard-layout > * {
+  flex: 1;
+}
