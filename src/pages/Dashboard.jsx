@@ -6,12 +6,16 @@ import Reviews from '../components/Reviews';
 import ReviewForm from '../components/ReviewForm';
 import Wishlist from '../components/Wishlist';
 
-function Dashboard({reviews, addReview, wishlist, addToWishlist, currentRead, selectCurrentRead}) {
+function Dashboard({reviews, addReview, wishlist, addToWishlist, currentRead, selectCurrentRead, removeFromWishlist}) {
   return (
     <>
       <h1>Dashboard</h1>
       <div className="dashboard-layout">
-        <ProgressBar currentRead={currentRead} />
+        <ProgressBar 
+        currentRead={currentRead}
+        setCurrentRead={selectCurrentRead}
+        removeFromWishlist={removeFromWishlist}
+        />
         <ReviewForm addReview={addReview}/>
       </div>
       <div className="dashboard-layout">

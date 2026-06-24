@@ -1,13 +1,23 @@
 import { useState } from 'react';
 import './ProgressBar.css';
 
-export default function ProgressBar({currentRead}) {
+export default function ProgressBar({currentRead, setCurrentRead, removeFromWishlist}) {
   const [pagesRead, setPagesRead] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
 
   const percentage = totalPages > 0
     ? Math.round((Math.min(pagesRead, totalPages) / totalPages) * 100)
     : 0;
+
+  function handleComplete() {
+    removeFromWishlist(currentRead.id);
+    setCurrentRead(null);
+    setPagesRead(0);
+    setTotalPages(0);
+    const leaveReview = window.confirm(
+      `You finished ${currentRead.title}! Leave a review now!`
+    );
+  }
 
   return (
     <div className="tracker">
@@ -44,6 +54,9 @@ export default function ProgressBar({currentRead}) {
               value={totalPages}
               onChange={(e) => setTotalPages(Number(e.target.value))}
             />
+            <button id="complete-btn" onClick={handleComplete}>
+              Mark as Completed
+            </button>
           </>
         ) : (
           <p>No current read selected. Pick one from your wishlist!</p>

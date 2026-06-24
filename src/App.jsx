@@ -33,6 +33,10 @@ export default function App() {
         setCurrentRead(book);
     }
 
+    function removeFromWishlist(bookId) {
+        setWishlist(wishlist.filter(book => book.id !== bookId));
+    }
+
 
 
 
@@ -54,6 +58,7 @@ export default function App() {
                     addToWishlist={addToWishlist}
                     currentRead={currentRead}
                     selectCurrentRead={selectCurrentRead}
+                    removeFromWishlist={removeFromWishlist}
                     />}
                 />
                 <Route path="/reviews" element={
