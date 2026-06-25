@@ -1,26 +1,29 @@
-#rvw-form {
+.timer {
   background-color: #797f3e;
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
-  color: #ffffff;
-  font-weight: bold;
+  gap: 10px;
 }
 
-.rvw-input {
-  font-family: "Times New Roman", Times, serif;
-  margin: 5px;
-  padding: 5px;
-  border: none;
+.time-selector {
+  background-color: #eadfbdc7;
+  padding: 15px;
   border-radius: 8px;
-  color: #454f2d;
-  font-weight: bold;
+  color: #534332;
+  text-align: center;
 }
 
-#rvw-btn {
+.timer-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer-btn {
   font-family: "Times New Roman", Times, serif;
   margin: 5px;
-  padding: 5px;
+  padding: 8px;
   border: none;
   border-radius: 8px;
   background-color: #454f2d;
@@ -28,6 +31,6 @@
   font-weight: bold;
 }
 
-#rvw-btn:hover {
+.timer-btn:hover {
   color: #efb711;
 }

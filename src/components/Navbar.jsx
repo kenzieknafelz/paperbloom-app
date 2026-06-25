@@ -15,7 +15,7 @@ export default function Navbar() {
                 </li>
 
                 <li className="navItem">
-                    <a href="../pages/ReadingSession.jsx">Reading Sessions</a>
+                    <Link to='/sessions'>Reading Sessions</Link>
                 </li>
 
                 <li className="navItem">
