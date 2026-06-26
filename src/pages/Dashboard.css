@@ -5,3 +5,26 @@
 .dashboard-layout > * {
   flex: 1;
 }
+
+.reading-session {
+  background-color: #a2865a;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  color: #eadfbd;
+}
+
+.new-session-btn {
+  font-family: "Times New Roman", Times, serif;
+  margin: 5px;
+  padding: 5px;
+  border: none;
+  border-radius: 8px;
+  background-color: #534332;
+  color: #f5f1e4;
+  font-weight: bold;
+}
+
+.new-session-btn:hover {
+  color: #efb711;
+}

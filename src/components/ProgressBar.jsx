@@ -1,9 +1,12 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './ProgressBar.css';
 
 export default function ProgressBar({currentRead, setCurrentRead, removeFromWishlist}) {
   const [pagesRead, setPagesRead] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
+
+  const navigate = useNavigate();
 
   const percentage = totalPages > 0
     ? Math.round((Math.min(pagesRead, totalPages) / totalPages) * 100)
@@ -17,6 +20,7 @@ export default function ProgressBar({currentRead, setCurrentRead, removeFromWish
     const leaveReview = window.confirm(
       `You finished ${currentRead.title}! Leave a review now!`
     );
+    navigate('/reviews');
   }
 
   return (

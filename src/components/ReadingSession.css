@@ -1,0 +1,22 @@
+.sessions-container {
+  background-color: #a2865a;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  color: #eadfbd;
+}
+
+.sessions-list {
+  list-style-type: none;
+}
+
+.session-card {
+  background-color: #eadfbdb0;
+  padding: 5px;
+  border-radius: 5px;
+  color: #534332;
+}
+
+.session-book {
+  font-style: italic;
+}

@@ -6,7 +6,7 @@ import Navbar from './components/Navbar';
 import Dashboard from './pages/Dashboard';
 import ReviewsPage from './pages/ReviewsPage';
 import WishlistPage from './pages/WishlistPage';
-import ReadingSession from './pages/ReadingSession';
+import SessionsPage from './pages/SessionsPage';
 
 
 
@@ -21,7 +21,11 @@ export default function App() {
         setReviews([{id: reviews.length + 1, ...newReview}, ...reviews]);
     }
 
-    const [wishlist, setWishlist] = useState([]);
+    const [wishlist, setWishlist] = useState([
+        { id: 1, title: 'I Who Have Never Known Men', author: 'Jacqueline Harpman' },
+        { id: 2, title: 'Pride and Prejudice', author: 'Jane Austen' },
+        { id: 3, title: 'The Song of Achilles', author: 'Madeline Miller' },
+    ]);
     const [currentRead, setCurrentRead] = useState(null);
 
     function addToWishlist(book) {
@@ -36,7 +40,11 @@ export default function App() {
         setWishlist(wishlist.filter(book => book.id !== bookId));
     }
 
+    const [sessions, setSessions] = useState([]);
 
+    function addSession(session) {
+        setSessions([{id: sessions.length + 1, ...session}, ...sessions]);
+    }
 
 
     return (
@@ -58,6 +66,8 @@ export default function App() {
                     currentRead={currentRead}
                     selectCurrentRead={selectCurrentRead}
                     removeFromWishlist={removeFromWishlist}
+                    addSession={addSession}
+                    sessions={sessions}
                     />}
                 />
                 <Route path="/reviews" element={
@@ -73,7 +83,10 @@ export default function App() {
                     />}
                 />
                 <Route path="/sessions" element={
-                    <ReadingSession />
+                    <SessionsPage
+                    sessions={sessions}
+                    addSession={addSession}
+                    />
                 }
                 />
             </Routes>

@@ -1,7 +1,7 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, use } from 'react';
 import './Timer.css';
 
-export default function Timer() {
+export default function Timer({currentRead, addSession}) {
     const [selectedTime, setSelectedTime] = useState(10);
     const [timeLeft, setTimeLeft] = useState(10 * 60);
     const [isRunning, setIsRunning] = useState(false);
@@ -44,6 +44,17 @@ export default function Timer() {
         }
         return () => clearInterval(intervalRef.current);
     }, [isRunning]);
+
+    useEffect(() => {
+        if (timeLeft === 0 && !isRunning) {
+            addSession({
+                date: new Date().toLocaleDateString(),
+                duration: selectedTime,
+                book: currentRead ? currentRead.title : 'No book selected'
+            });
+        }
+    }, [timeLeft]);
+
 
     function formatTime(seconds) {
         const mins = Math.floor(seconds / 60);
