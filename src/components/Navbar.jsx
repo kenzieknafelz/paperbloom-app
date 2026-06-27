@@ -19,7 +19,7 @@ export default function Navbar() {
                 </li>
 
                 <li className="navItem">
-                    <a href="../pages/Journal.jsx">Journal</a>
+                    <Link to='/journal'>Journal</Link>
                 </li>
 
                 <li className="navItem">

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, use } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './Timer.css';
 
 export default function Timer({currentRead, addSession}) {
@@ -44,6 +44,13 @@ export default function Timer({currentRead, addSession}) {
         }
         return () => clearInterval(intervalRef.current);
     }, [isRunning]);
+
+    const addSessionRef = useRef(addSession);
+
+    useEffect(() => {
+        addSessionRef.current = addSession;
+    }, [addSession]);
+
 
     useEffect(() => {
         if (timeLeft === 0 && !isRunning) {

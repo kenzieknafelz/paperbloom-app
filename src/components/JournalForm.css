@@ -1,0 +1,33 @@
+.journal-form {
+  background-color: #454f2dd0;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.journal-input {
+  font-family: "Times New Roman", Times, serif;
+  margin: 5px;
+  padding: 5px;
+  border: none;
+  border-radius: 8px;
+  color: #454f2d;
+  font-weight: bold;
+}
+
+.journal-btn {
+  font-family: "Times New Roman", Times, serif;
+  margin: 5px;
+  padding: 5px;
+  border: none;
+  border-radius: 8px;
+  background-color: #797f3e;
+  color: #f5f1e4;
+  font-weight: bold;
+}
+
+.journal-btn:hover {
+  color: #efb711;
+}

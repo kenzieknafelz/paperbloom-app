@@ -1,0 +1,29 @@
+.journal-entries {
+  background-color: #454f2dd0;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  gap: 10px;
+}
+
+.book-group {
+  background-color: #797f3e;
+  padding: 5px;
+  padding-left: 10px;
+  margin: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.group-title {
+  font-style: italic;
+}
+
+.journal-date,
+.journal-page {
+  font-weight: bold;
+}
+
+.journal-entry {
+  font-weight: 100;
+}

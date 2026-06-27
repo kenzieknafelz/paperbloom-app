@@ -7,7 +7,7 @@ import Dashboard from './pages/Dashboard';
 import ReviewsPage from './pages/ReviewsPage';
 import WishlistPage from './pages/WishlistPage';
 import SessionsPage from './pages/SessionsPage';
-
+import JournalPage from './pages/JournalPage';
 
 
 export default function App() {
@@ -46,6 +46,12 @@ export default function App() {
         setSessions([{id: sessions.length + 1, ...session}, ...sessions]);
     }
 
+    const [journalEntries, setJournalEntries] = useState([]);
+
+    function addJournalEntry(entry) {
+        setJournalEntries([{ id: journalEntries.length + 1, ...entry}, ...journalEntries]);
+    }
+
 
     return (
         <>
@@ -68,6 +74,8 @@ export default function App() {
                     removeFromWishlist={removeFromWishlist}
                     addSession={addSession}
                     sessions={sessions}
+                    journalEntries={journalEntries}
+                    addJournalEntry={addJournalEntry}
                     />}
                 />
                 <Route path="/reviews" element={
@@ -86,6 +94,13 @@ export default function App() {
                     <SessionsPage
                     sessions={sessions}
                     addSession={addSession}
+                    />
+                }
+                />
+                <Route path='/journal' element={
+                    <JournalPage
+                    journalEntries={journalEntries}
+                    addJournalEntry={addJournalEntry}
                     />
                 }
                 />

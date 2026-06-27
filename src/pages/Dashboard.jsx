@@ -4,11 +4,9 @@ import { useNavigate } from 'react-router-dom';
 
 import ProgressBar from '../components/ProgressBar';
 import Reviews from '../components/Reviews';
-import ReviewForm from '../components/ReviewForm';
 import Wishlist from '../components/Wishlist';
-import Timer from '../components/Timer';
 
-function Dashboard({
+export default function Dashboard({
   reviews, 
   addReview, 
   wishlist, 
@@ -18,6 +16,8 @@ function Dashboard({
   removeFromWishlist,
   addSession,
   sessions,
+  journalEntries,
+  addJournalEntry,
   }) {
 
     const navigate = useNavigate();
@@ -51,6 +51,31 @@ function Dashboard({
         setCurrentRead={selectCurrentRead}
         removeFromWishlist={removeFromWishlist}
         />
+
+        <div className='latest-entry'>
+          <h2>Latest Journal Entry</h2>
+
+          {journalEntries.length === 0 ? (
+            <p>No entries yet. Start journaling your reading journey!</p>
+          ) : (
+            <div className='journal-card'>
+              <div className='journal-card-header'>
+                <p className='journal-book'>{journalEntries[0].book}</p>
+                <p className='journal-date'>{journalEntries[0].date}</p>
+              </div>
+            {journalEntries[0].page && (
+              <p className='journal-page'>Page {journalEntries[0].page}</p>
+            )}
+              <p className='journal-entry'>{journalEntries[0].entry}</p>
+            </div>
+          )}
+          <button
+          className='new-entry-btn'
+          onClick={() => navigate('/journal')}
+          >
+            + New Journal Entry
+          </button>
+          </div>
       </div>
 
       <div className="dashboard-layout">
@@ -67,5 +92,3 @@ function Dashboard({
     </>
   );
 }
-
-export default Dashboard;
