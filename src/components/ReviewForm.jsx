@@ -26,7 +26,8 @@ export default function ReviewForm({addReview}) {
                 <label htmlFor="title">Title:</label>
                 <input
                     name="title"
-                    type="text" 
+                    type="text"
+                    placeholder="Book title" 
                     className="rvw-input" 
                     id="title"
                     value={formData.title}
@@ -38,6 +39,7 @@ export default function ReviewForm({addReview}) {
                 <input 
                     name="author" 
                     type="text" 
+                    placeholder="Author"
                     className="rvw-input" 
                     id="author" 
                     value={formData.author}
@@ -49,6 +51,7 @@ export default function ReviewForm({addReview}) {
                 <input
                     name="rating"
                     type="number"
+                    placeholder="0"
                     className="rvw-input"
                     min="1"
                     max="5"
@@ -64,7 +67,7 @@ export default function ReviewForm({addReview}) {
                     className="rvw-input" 
                     rows="4" 
                     cols="40" 
-                    placeholder='Write your review here!'
+                    placeholder="Write your review here!"
                     value={formData.review}
                     onChange={handleChange}
                 />

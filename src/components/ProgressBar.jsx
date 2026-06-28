@@ -35,7 +35,7 @@ export default function ProgressBar({currentRead, setCurrentRead, removeFromWish
         <h4>Current Read:</h4>
         {currentRead ? (
           <>
-            <h4>{currentRead.title}</h4>
+            <p className='book-title'>{currentRead.title}</p>
             <p>{currentRead.author}</p>
 
             <label htmlFor="pages-read">Pages Read:</label>

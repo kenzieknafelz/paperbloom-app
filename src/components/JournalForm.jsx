@@ -25,6 +25,7 @@ export default function JournalForm({ addJournalEntry, currentRead }) {
     return (
         <div className="journal-form">
             <h2>New Journal Entry</h2>
+            <label htmlFor="title">Book title:</label>
             <input
             className="journal-input"
             name="book"
@@ -33,6 +34,8 @@ export default function JournalForm({ addJournalEntry, currentRead }) {
             onChange={handleChange}
             />
             <br />
+
+            <label htmlFor="page">Page Number:</label>
             <input
             className="journal-input"
             name="page"
@@ -41,6 +44,9 @@ export default function JournalForm({ addJournalEntry, currentRead }) {
             value={formData.page}
             onChange={handleChange}
             />
+            <br />
+
+            <label htmlFor="entry">Entry:</label>
             <br />
             <textarea
             className="journal-input"

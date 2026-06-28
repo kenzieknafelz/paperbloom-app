@@ -22,9 +22,9 @@ export default function App() {
     }
 
     const [wishlist, setWishlist] = useState([
-        { id: 1, title: 'I Who Have Never Known Men', author: 'Jacqueline Harpman' },
-        { id: 2, title: 'Pride and Prejudice', author: 'Jane Austen' },
-        { id: 3, title: 'The Song of Achilles', author: 'Madeline Miller' },
+        { id: 1, title: 'Pride and Prejudice', author: 'Jane Austen' },
+        { id: 2, title: 'The Song of Achilles', author: 'Madeline Miller' },
+        { id: 3, title: 'Digital Fortress', author: 'Dan Brown' },
     ]);
     const [currentRead, setCurrentRead] = useState(null);
 
@@ -80,7 +80,8 @@ export default function App() {
                 />
                 <Route path="/reviews" element={
                     <ReviewsPage
-                    reviews={reviews} 
+                    reviews={reviews}
+                    addReview={addReview}
                     />} 
                 />
                 <Route path="/wishlist" element={

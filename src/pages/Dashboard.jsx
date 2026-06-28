@@ -7,8 +7,7 @@ import Reviews from '../components/Reviews';
 import Wishlist from '../components/Wishlist';
 
 export default function Dashboard({
-  reviews, 
-  addReview, 
+  reviews,  
   wishlist, 
   addToWishlist, 
   currentRead, 
@@ -17,7 +16,6 @@ export default function Dashboard({
   addSession,
   sessions,
   journalEntries,
-  addJournalEntry,
   }) {
 
     const navigate = useNavigate();

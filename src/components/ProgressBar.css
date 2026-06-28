@@ -59,3 +59,7 @@
 #complete-btn:hover {
   color: #efb711;
 }
+
+.book-title {
+  font-style: italic;
+}
